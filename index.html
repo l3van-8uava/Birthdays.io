@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>CB Client Birthday</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Stick+No+Bills&family=Tourney:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Stick+No+Bills:200,300,regular,500,600,700,800" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/1024X768.css">
+    <link rel="stylesheet" href="/1280x1024.css">
+    <link rel="stylesheet" href="/1920x1080.css">
+    <link rel="stylesheet" href="/768x1024.css">
+    <link rel="stylesheet" href="/360x640.css">
+</head>
+<body>
+<header>
+    <h1>CB Clients Birthday</h1>
+    <img id="bog_logo" src="/bog_3d (2).png" alt="Error">
+</header>
+<div>
+    <svg class="waves"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 24 150 28 "
+        preserveAspectRatio="none">
+        <defs>
+            <path id="gentle-wave"
+                d="M-160 44c30 0 
+                58-18 88-18s
+                58 18 88 18 
+                58-18 88-18 
+                58 18 88 18
+                v44h-352z" />
+        </defs>
+        <g class="lax1">
+            <use xlink:href="#gentle-wave" x="50" y="3" fill="#f461c1"/>
+        </g>
+        <g class="lax2">
+            <use xlink:href="#gentle-wave" x="50" y="0" fill="#4579e2"/>
+        </g>
+        <g class="lax3">
+            <use xlink:href="#gentle-wave" x="50" y="9" fill="#3461c1"/>
+        </g>
+        <g class="lax4">
+            <use xlink:href="#gentle-wave" x="50" y="6" fill="#fff"/>  
+        </g>
+    </svg>
+</div>
+<P class="info">Add Client info</P>
+<div id="container">
+    <form id="infoForm">
+        <div class="firstRow">
+            <div class="form-field">
+                <label for="clientKey">Client Key:</label>
+                <input type="text" id="clientKey" name="clientKey" required />
+            </div>
+
+            <div class="form-field">
+                <label for="codeInn">Code Inn:</label>
+                <input type="text" id="codeInn" name="codeInn" required />
+            </div>
+
+            <div class="form-field">
+                <label for="clientShort">Client Short:</label>
+                <input type="text" id="clientShort" name="clientShort" required />
+            </div>
+
+            <div class="form-field">
+                <label for="corpUser">Corp User:</label>
+                <input type="text" id="corpUser" name="corpUser" required />
+            </div>
+
+            <div class="form-field">
+                <label for="CorpSHGS">CorpSHGC:</label>
+                <input type="text" id="CorpSHGS" name="CorpSHGS" required />
+            </div>
+
+            <div class="form-field">
+                <label for="cluster">Cluster:</label>
+                <input type="text" id="cluster" name="cluster" required />
+            </div>
+
+            <div class="form-field">
+                <label for="corpGroup">Corp Group:</label>
+                <input type="text" id="corpGroup" name="corpGroup" required />
+            </div>
+
+            <div class="form-field">
+                <label for="team">Team:</label>
+                <input type="text" id="team" name="team" required />
+            </div>
+
+        </div>
+        <div class="secondRow">
+            <div class="form-field">
+                <label for="representative">Representative:</label>
+                <input type="text" id="representative" name="representative" required />
+            </div>
+
+            <div class="form-field">
+                <label for="position">Position:</label>
+                <input type="text" id="position" name="position" required />
+            </div>
+
+            <div class="form-field">
+                <label for="birthday">Birthday:</label>
+                <input type="date" id="birthday" name="birthday" placeholder="dd-mm-yyyy" required />
+            </div>
+
+            <div class="form-field">
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" required />
+            </div>
+
+            <div class="form-field">
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required />
+            </div>
+
+            <div class="form-field">
+                <label for="phone1">Phone 1:</label>
+                <input type="text" id="phone1" name="phone1" required />
+            </div>
+
+            <div class="form-field">
+                <label for="phone2">Phone 2:</label>
+                <input type="text" id="phone2" name="phone2" notrequired/>
+            </div>
+        </div>
+        <div class="thirdRow">
+            <div class="form-field">
+                <label for="mail">E-mail:</label>
+                <input type="email" id="mail" name="mail" required />
+            </div>
+
+            <div class="form-field">
+                <label for="language">Language:</label>
+                <select id="language" name="language" required>
+                    <option value="">Select a language</option>
+                    <option value="Georgian">Georgian</option>
+                    <option value="English">English</option>
+                    <option value="Spanish">Spanish</option>
+                    <option value="French">French</option>
+                    <!-- Add more options for other languages as needed -->
+                </select>
+            </div>
+            
+            <div class="form-field">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="">Select a Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Famale">Famale</option>
+                    <!-- Add more options for other languages as needed -->
+                </select>
+            </div>
+
+            <div class="form-field">
+                <label for="personalID">Personal ID:</label>
+                <input type="text" id="personalID" name="personalID" required />
+            </div>
+
+            <div class="form-field">
+                <label for="status">Status:</label>
+                <select id="status" name="status" required>
+                    <option value="">Select a Status</option>
+                    <option value="Express">Express</option>
+                    <option value="Gold">Gold</option>
+                    <option value="RB">RB</option>
+                    <option value="Retail">Retail</option>
+                    <option value="Silver">Silver</option>
+                    <option value="Solo">SOLO</option>
+                    <option value="SoloClub">SOLO Club</option>
+                    <option value="SoloCore">SOLO Core</option>
+                    <option value="WM">WM</option>
+                    <!-- Add more options for other languages as needed -->
+                </select>
+            </div>
+
+            <div class="form-field">
+                <label for="giftCategory">Gift Category:</label>
+                <select id="giftCategory" name="giftCategory" required>
+                    <option value="">Select a Category</option>
+                    <option value="top">Top</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+            
+            <div class="form-field">
+                <label for="essential">Gift is Essential:</label>
+                <select id="essential" name="essential" required>
+                    <option value="">Select</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            
+        </div>
+        <button id="save">Save</button>
+    </form>
+    <button class="toggle-button" id="toggleForm"><span class="arrow-down">&#9660;</span><span class="arrow-up">&#9650;</span></button>
+</div>
+
+<div>
+    <svg class="editorial"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 24 150 28 "
+        preserveAspectRatio="none">
+        <defs>
+            <path id="gentle-wave"
+                d="M-160 44c30 0 
+                58-18 88-18s
+                58 18 88 18 
+                58-18 88-18 
+                58 18 88 18
+                v44h-352z" />
+        </defs>
+        <g class="parallax1">
+            <use xlink:href="#gentle-wave" x="50" y="3" fill="#f461c1"/>
+        </g>
+        <g class="parallax2">
+            <use xlink:href="#gentle-wave" x="50" y="0" fill="#4579e2"/>
+        </g>
+        <g class="parallax3">
+            <use xlink:href="#gentle-wave" x="50" y="9" fill="#3461c1"/>
+        </g>
+        <g class="parallax4">
+            <use xlink:href="#gentle-wave" x="50" y="6" fill="#fff"/>  
+        </g>
+    </svg>
+</div>
+<div id="informations">
+    <div class="clientlist">
+        <div class="updown">
+        <input type="file" id="fileInput" accept=".xlsx" hidden/>
+        <h5 id="uploadLabel">Upload</h5>
+        <button id="downloadButton">Download</button>
+        </div>
+        <P></P>
+        <P>Clients List</P>
+        <p></p>
+    </div>
+
+    <div id="clientList"></div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.3/xlsx.full.min.js"></script>
+
+<script src="main.js"></script>
+<footer>Created by CB Reporting and Analysis Unit </footer>
+</body>
+</html>
