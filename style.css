@@ -1,0 +1,607 @@
+@import url('https://fonts.googleapis.com/css2?family=Stick+No+Bills&family=Tourney:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{height: 100%;}
+body{height: 100%;}
+
+/*Header parts*/
+header{
+    background-color: #FF9E15;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#bog_logo {
+    height: 100px;
+}
+
+h1 {
+    font-family: "Stick No Bills", sans-serif;
+    font-size: 70px;
+    line-height: 1;
+    margin: 0;
+    letter-spacing: 0.075ch;
+    color: white;
+    text-align: center;
+    --light-pos-x: -1; /* left: -1, center: 0, right: 1 */
+    --light-pos-y: -1; /* top: -1, center: 0, bottom: 1 */
+    
+    --rim-size: .02ch;
+    --shadow-offset: .2ch;
+    --shadow-blur: .1ch;
+    text-shadow: 
+      calc(max(var(--rim-size), 1px) * var(--light-pos-x)) calc(max(var(--rim-size), 1px) * var(--light-pos-y)) hsl(0 0% 100%),
+      calc(max(var(--rim-size), 1px) * var(--light-pos-x) * -1) calc(max(var(--rim-size), 1px) * var(--light-pos-y) * -1) hsl(0 0% 60%),
+      calc(var(--shadow-offset) * var(--light-pos-x) * -1) calc(var(--shadow-offset) * var(--light-pos-y) * -1) var(--shadow-blur) hsla(0, 1%, 14%, 0.75) 
+}
+/*Header end*/
+
+
+
+/*Add Client info fields*/
+.info{
+    font-size: 25px;
+    height: auto;
+    text-align: center;
+    padding: 30px;
+    font-family: "Stick No Bills", sans-serif;
+    text-shadow: #5E566A 2px 2px 5px;
+}
+
+#container{
+    padding-bottom: 70px;
+    align-items: center;
+    display: flex;
+    flex-flow: column;
+}
+
+
+#infoForm {
+    display:flex;
+    column-gap:20px;
+    flex-wrap: wrap;
+    display: none;
+    transition: 0s;
+}
+
+#infoForm.active {
+    transition: 0.5s;
+    transition-delay: 0.5s;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: end;
+}
+
+#infoForm label {
+    color: #5E566A;
+    font-size: 20px;
+    font-family: "Stick No Bills", sans-serif;
+    text-align: end;
+    width: 150px; /* Set a fixed width for labels */
+    display: inline-block; /* Make labels behave like inline-block elements */
+}
+
+.form-field {
+    align-items: center;
+    margin-bottom: 10px;
+    justify-content: center; /* Add spacing between form fields */
+}
+
+#infoForm input {
+    height: 40px;
+    font-size: 15px;
+    text-align: center;
+    width: 200px; /* Set width for input fields */
+    border: solid 1px;
+    border-radius: 10px;
+    border-color: #FF9E15;
+    box-shadow: 10px 5px 5px #5E566A;
+}
+
+#save {
+    width: 100px; /* Fixed width */
+    height: 40px;
+    border: solid 1px;
+    background-color: transparent;
+    border-radius: 25px;
+    border-color: #FF9E15;
+    color: #FF9E15;
+    cursor: pointer;
+    box-shadow: 10px 5px 5px #5E566A;
+    
+}
+
+#save:hover{
+    color: white;
+    background-color: #FF9E15;
+    transition-delay: 0.5s;
+    transition: 0.5s;
+}
+
+#toggleForm {
+    height: 50px;
+    width: 70px;
+    border-radius: 30px;
+    background-color: white;
+    color: #FF9E15;
+    border: solid 1px #FF9E15;
+    transition: 0s;
+    align-items: center;
+    box-shadow: 5px 5px 5px #5E566A;
+}
+
+#toggleForm:hover{
+    background-color: #FF9E15;
+    transition-delay: 0.5s;
+    transition: 0.5s;
+}
+
+
+.toggle-button {
+    margin: 30px;
+    background-color: #f0f0f0; /* Default background color */
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-flex; /* Use flexbox */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    font-size: 16px; /* Default font size */
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px; /* Default border radius */
+    transition: background-color 0.3s;
+    outline: none;
+}
+
+.toggle-button:hover {
+    background-color: #ddd;
+    transform: translateY(1px);
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.arrow-down:hover{
+    color: white;
+}
+
+.arrow-up:hover{
+    color: white;
+}
+
+.toggle-button:active {
+    transform: translateY(2px); /* Move button down further on click */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4); /* Adjust box-shadow on click */
+}
+
+/* Style the arrow icons */
+.toggle-button .arrow-down, .toggle-button .arrow-up {
+    font-size: 30px;
+}
+
+/*Add Client info end*/
+
+
+/*client list*/
+
+.clientlist{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 50px;
+    margin-top: 50px;
+    background-color: #FFCB8A;
+}
+
+#fileInput{
+    align-self: center;
+    width: 100%;
+}
+
+.updown{
+    display: flex;
+    width: 500px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+h5 {
+    background-color: #5E566A;
+    font-size: 12px;
+    color: white;
+    padding: 0.5rem;
+    font-family: sans-serif;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    box-shadow: #5E566A 5px 5px 5px;
+}
+
+#downloadButton{
+    background-color: #5E566A;
+    margin-left: 15px;
+    width: 60px;
+    font-size: 12px;
+    height: 31px;
+    color: white;
+    font-family: sans-serif;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    border: none;
+    box-shadow: #5E566A 5px 5px 5px;
+}
+
+
+.clientlist p {
+    width: 100%;
+    color: #5E566A;
+    text-align: center;
+    font-size: 30px;
+    font-family: "Stick No Bills", sans-serif;
+    text-shadow: #5E566A 2px 2px 5px;
+}
+
+#clientList{
+    height: 100%;
+    padding: 30px;
+    align-self: center;
+    color: #5E566A;
+    display: flex;
+    flex-direction: column;
+    column-gap: 50px;
+    row-gap: 50px;
+    background-color: #FFCB8A;
+    padding-bottom: 50px;
+}
+
+.section-header{
+    border-bottom: double;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    display: flex;
+    width: 20%;
+    justify-content: space-between;
+    font-family: "Stick No Bills", sans-serif;
+    text-shadow: #5E566A 3px 3px 5px;
+}
+
+.section-header button{
+    width: 30px; /* Fixed width */
+    height: 30px;
+    border: solid 1px;
+    background-color: white;
+    border-radius: 25px;
+    border-color: #FF9E15;
+    color: #FF9E15;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px #5E566A;
+    
+}
+
+.section-header button:hover{
+    color: white;
+    background-color: #FF9E15;
+    transition-delay: 0.5s;
+    transition: 0.5s;
+}
+
+.client-container.minimized {
+    display: none;
+}
+/*client list end*/
+
+
+/*Each clients info and details*/
+.client-container{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 30px;
+}
+
+.client{
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 130px 50px;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    background-color:white;
+    text-align: center;
+    justify-content: center;
+    width: 300px;
+    border: solid 2px #b4b4b4;
+    height: 180px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 5px #5E566A;
+}
+
+.client-info{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    align-self: center;
+}
+
+
+.client button{
+    width: 60px;
+    height: 30px;
+    font-size: 15px;
+    border-radius: 20px;
+    background-color: transparent;
+    color: #FF9E15;
+    border-color: #FF9E15;
+    border: solid 1px;
+    cursor: pointer;
+    grid-area: 2 / 1 / 3 / 2; ;
+    text-align: center;
+    justify-self: center;
+}
+
+.client button:hover{
+    background-color: #FF9E15;
+    transition-delay: 0.5s;
+    transition: 0.5s;
+    color: white;
+}
+/*Each clients info and details end*/
+
+
+/*After clicking info button on client div*/
+.modal-content button{
+    width: 60px;
+    align-self: center;
+    margin-top: 30px;
+    height: 30px;
+    font-size: 15px;
+    border-radius: 20px;
+    background-color: transparent;
+    color: #FF9E15;
+    border-color: #FF9E15;
+    border: solid 1px;
+    cursor: pointer;
+}
+
+
+.modal-content button:hover{
+    background-color: #FF9E15;
+    transition-delay: 0.5s;
+    transition: 0.5s;
+    color: white;
+}
+
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure the modal is above other elements */
+}
+
+.modal-content {
+    width: auto;
+    display: flex;
+    column-gap: 10px;
+    margin: auto;
+    font-size: 25px;
+    border: solid 1px #FF9E15;
+    color: #5E566A;
+    flex-direction: column;
+    background-color: #fff; /* White background for modal content */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Box shadow for a subtle effect */
+}
+
+.modal-content input {
+    border: solid 1px #FF9E15;
+    display: flex;
+    margin: auto;
+    font-size: 20px;
+    border: solid 1px #FF9E15;
+    border-radius: 5px;
+    color: #5E566A;
+}
+
+.modal-content p {
+    border-bottom:solid 1px #5E566A;
+
+}
+
+.modal-content #birthday{
+    width: 245px;
+}
+
+.modal-content strong{
+    color: #FF9E15;
+}
+
+.modal-content label{
+    width: 160px;
+}
+
+#infoForm select {
+    box-shadow: 10px 5px 5px #5E566A;
+}
+
+.select-container {
+    display: flex;
+    height: auto;
+
+}
+
+.select-container select{
+    height: auto;
+    border-radius: 5px;
+    max-width: 246.5px;
+    width: 100%;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+select{
+    margin: auto;
+    font-size: 20px;
+    border: solid 1px #FF9E15;
+    border-radius: 5px;
+    align-self: baseline;
+    color: #5E566A;
+    height: 42.5px;
+    width: 205px;
+    border-radius: 10px;
+}
+
+#editButton, #delete{
+    margin-top: 5px;
+    
+}
+
+
+.modal-content .input-field{
+    display: flex;
+    justify-content: baseline;
+}
+/*After clicking info button on client div end*/
+
+
+/*beautifull waves in middle*/
+.editorial {
+    display: block;
+    width: 100%;
+    height: 100px;
+    margin: 0;
+    z-index:5;
+    bottom:0;
+    left:0px;
+    float:left;
+}
+.parallax1 > use {
+    fill: #5E566A; /* Change this to the desired color */
+    animation: move-forever1 10s linear infinite;
+    &:nth-child(1) {
+    animation-delay: -2s;
+    }
+}
+.parallax2 > use {
+    fill: #FF661B; /* Change this to the desired color */
+    animation: move-forever2 8s linear infinite;
+    &:nth-child(1) {
+    animation-delay: -2s;
+    }
+}
+.parallax3 > use {
+    fill: #FF9E15; /* Change this to the desired color */
+    animation: move-forever3 6s linear infinite;
+    &:nth-child(1) {
+    animation-delay: -2s;
+    }
+}
+.parallax4 > use {
+    fill: #FFCB8A; /* Change this to the desired color */
+    animation: move-forever4 4s linear infinite;
+    &:nth-child(1) {
+    animation-delay: -2s;
+    }
+}
+@keyframes move-forever1 {
+    0% {
+    transform: translate(85px, 0%);
+    }
+    100% {
+    transform: translate(-90px, 0%);
+    }
+}
+@keyframes move-forever2 {
+    0% {
+    transform: translate(-90px, 0%);
+    }
+    100% {
+    transform: translate(85px, 0%);
+    }
+}
+@keyframes move-forever3 {
+    0% {
+    transform: translate(85px, 0%);
+    }
+    100% {
+    transform: translate(-90px, 0%);
+    }
+}
+@keyframes move-forever4 {
+    0% {
+    transform: translate(-90px, 0%);
+    }
+    100% {
+    transform: translate(85px, 0%);
+    }
+}
+/*beautifull waves in middle end*/
+
+
+/*I think name says it all :)*/
+footer{
+    font-family: "Stick No Bills", sans-serif;
+    text-align: end;
+    padding: 0px 10px;
+    font-size: 15px;
+}
+
+
+.waves {
+    display: block;
+    width: 100%;
+    height: 100px;
+    max-height: 100px;
+    margin-top: 100px;
+    z-index:5;
+    left:0px;
+    float:left;
+    transform: rotate(180deg);
+    transform-origin: top;
+}
+
+.lax1 > use {
+    fill: #5E566A; /* Change this to the desired color */
+    animation: move-forever1 10s linear infinite;
+    &:nth-child(1) {
+    animation-delay: -2s;
+    }
+}
+.lax2 > use {
+    fill: #FF661B; /* Change this to the desired color */
+    animation: move-forever2 8s linear infinite;
+    &:nth-child(1) {
+    animation-delay: -2s;
+    }
+}
+.lax3 > use {
+    fill: #FFCB8A; /* Change this to the desired color */
+    animation: move-forever3 6s linear infinite;
+    &:nth-child(1) {
+    animation-delay: -2s;
+    }
+}
+.lax4 > use {
+    fill: #FF9E15; /* Change this to the desired color */
+    animation: move-forever4 4s linear infinite;
+    &:nth-child(1) {
+    animation-delay: -2s;
+    }
+}
